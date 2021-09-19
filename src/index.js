@@ -11,7 +11,7 @@ import '@pnotify/core/dist/BrightTheme.css'
 defaultModules.set(PNotifyMobile, {})
 import { defaults } from '@pnotify/core'
 defaults.width = '400px'
-defaults.delay = '4000'
+defaults.delay = '3000'
 defaults.minHeight = '86px'
 
 var debounce = require('lodash.debounce')
