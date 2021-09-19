@@ -2,16 +2,19 @@ import countriesListTpl from './templates/countriesListTpl.hbs'
 import countryCardTpl from './templates/countryCardTpl.hbs'
 import API from './js/fetchCountries'
 import getRefs from './js/refs'
+const refs = getRefs()
 
 import { alert, error, defaultModules } from '@pnotify/core/dist/PNotify.js'
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js'
 import '@pnotify/core/dist/PNotify.css'
 import '@pnotify/core/dist/BrightTheme.css'
 defaultModules.set(PNotifyMobile, {})
+import { defaults } from '@pnotify/core'
+defaults.width = '400px'
+defaults.delay = '4000'
+defaults.minHeight = '86px'
 
 var debounce = require('lodash.debounce')
-
-const refs = getRefs()
 
 refs.searchForm.addEventListener('input', debounce(onSearch, 500))
 
